@@ -13,7 +13,19 @@ public class MainController {
 
     @RequestMapping("/")
     public String main(Model model) throws Exception {
+        model.addAttribute("center", "center");
+        return "index";
+    }
 
+    @RequestMapping("/cart")
+    public String about(Model model) throws Exception {
+        model.addAttribute("center", "cart");
+        return "index";
+    }
+
+    @RequestMapping("/all")
+    public String all(Model model) throws Exception {
+        model.addAttribute("center", "all");
         return "index";
     }
 }
